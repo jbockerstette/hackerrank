@@ -4,7 +4,7 @@ process.stdin.setEncoding('ascii');
 let input_stdin = '';
 let input_stdin_array = '';
 let input_currentline = 0;
-const input = ['10 4', '2 5 3 6'];
+const input = ['5 2', '2 4'];
 
 process.stdin.on('data', data => {
   input_stdin += data;
@@ -36,26 +36,27 @@ function removeDups(arr) {
 }
 
 function getPossibleWays(change, coins) {
+  if (!coins || coins.length === 0) {
+    return [];
+  }
   if (ans.has(change)) {
     return ans.get(change);
   }
-  const size = coins.length;
-  let allWays = [];
-  for (let i = 0; i < size; i++) {
-    const coin = coins[i];
-    if (change - coin === 0) {
-      allWays.push([coin]);
-    } else if (change - coin > 0) {
-      const ways = getPossibleWays(change - coin, coins);
-      ways.forEach(element => {
-        allWays.push([...element, coin]);
-      });
+  const allWays = [];
+  coins.forEach(coin => {
+    if (coin !== 0) {
+      if (change - coin === 0) {
+        allWays.push([coin]);
+      } else if (change - coin > 0) {
+        const ways = getPossibleWays(change - coin, coins);
+        ways.forEach(element => {
+          allWays.push([...element, coin]);
+        });
+      }
     }
-  }
-  allWays = removeDups(allWays);
+  });
+
   ans.set(change, allWays);
-  // console.log(change, allWays);
-  // console.log(ans);
   return allWays;
 }
 
@@ -66,6 +67,7 @@ function main() {
   coins = readLine().split(' ');
   coins = coins.map(Number);
   const ways = getPossibleWays(n, coins);
-  console.log(ways.length);
+  const answer = removeDups(ways);
+  console.log(answer.length);
 }
 main();
