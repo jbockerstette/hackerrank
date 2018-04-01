@@ -1,0 +1,68 @@
+looking for: 166
+looking for: 117
+looking for: 68
+looking for: 19
+looking for: 2
+looking for: 1
+found: 1
+found: 2
+looking for: 6
+looking for: 4
+looking for: 3
+found: 3
+found: 4
+looking for: 5
+found: 5
+found: 6
+looking for: 7
+found: 7
+looking for: 8
+found: 8
+looking for: 9
+found: 9
+looking for: 11
+looking for: 10
+found: 10
+found: 11
+looking for: 12
+found: 12
+looking for: 14
+looking for: 13
+found: 13
+found: 14
+looking for: 17
+looking for: 15
+found: 15
+looking for: 16
+found: 16
+found: 17
+looking for: 18
+found: 18
+found: 19
+looking for: 22
+looking for: 20
+found: 20
+looking for: 21
+found: 21
+found: 22
+looking for: 25
+looking for: 23
+found: 23
+looking for: 24
+found: 24
+found: 25
+looking for: 27
+looking for: 26
+found: 26
+found: 27
+
+<--- Last few GCs --->
+
+[4088:000002736C8BDFF0]    22475 ms: Mark-sweep 1404.6 (1458.2) -> 1404.6 (1458.2) MB, 748.8 / 0.0 ms  allocation failure GC in old space requested
+[4088:000002736C8BDFF0]    23219 ms: Mark-sweep 1404.6 (1458.2) -> 1404.6 (1435.7) MB, 743.5 / 0.0 ms  last resort GC in old space requested
+[4088:000002736C8BDFF0]    24038 ms: Mark-sweep 1404.6 (1435.7) -> 1404.6 (1435.7) MB, 819.0 / 0.0 ms  last resort GC in old space requested
+
+
+<--- JS stacktrace --->
+
+==== JS stack trace ================
