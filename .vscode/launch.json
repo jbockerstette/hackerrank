@@ -8,7 +8,7 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceFolder}/src\\ctci-coin-change.js"
+      "program": "${workspaceFolder}/src\\climbing-the-leaderboard.js"
     }
   ]
 }
